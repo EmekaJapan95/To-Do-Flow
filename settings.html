@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TodoFlow | Settings</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <!-- ======================
+SIDEBAR
+====================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>✅ TodoFlow</h2>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Dashboard</a>
+
+            <a href="tasks.html">Tasks</a>
+
+            <a href="add-task.html">Add Task</a>
+
+            <a href="calendar.html">Calendar</a>
+
+            <a class="active" href="settings.html">Settings</a>
+
+        </nav>
+
+    </aside>
+
+    <!-- ======================
+
+MAIN
+====================== -->
+
+    <div class="main">
+
+        <header>
+
+            <h1>
+
+                ⚙️ Settings
+
+            </h1>
+
+            <button id="themeToggle">
+
+                🌙
+
+            </button>
+
+        </header>
+
+
+        <!-- ======================
+THEME
+====================== -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                🌙 Theme
+
+            </h2>
+
+            <button id="lightTheme">
+
+                Light Mode
+
+            </button>
+
+            <button id="darkTheme">
+
+                Dark Mode
+
+            </button>
+
+        </section>
+
+
+        <!-- ======================
+COLOR THEMES
+====================== -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                🎨 Color Themes
+
+            </h2>
+
+            <div class="theme-colors">
+
+                <button class="theme blue"></button>
+
+                <button class="theme green"></button>
+
+                <button class="theme purple"></button>
+
+                <button class="theme orange"></button>
+
+                <button class="theme red"></button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================
+CATEGORIES
+====================== -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                📂 Categories
+
+            </h2>
+
+            <input type="text" id="categoryInput" placeholder="Create category">
+
+            <button id="createCategory">
+
+                Add Category
+
+            </button>
+
+            <div id="categoryList">
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================
+IMPORT / EXPORT
+====================== -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                💾 Backup
+
+            </h2>
+
+            <button id="exportTasks">
+
+                Export Tasks
+
+            </button>
+
+            <input type="file" id="importTasks">
+
+        </section>
+
+
+        <!-- ======================
+POMODORO
+====================== -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                🍅 Pomodoro Timer
+
+            </h2>
+
+            <h1 id="timer">
+
+                25:00
+
+            </h1>
+
+            <button id="startTimer">
+
+                Start
+
+            </button>
+
+            <button id="pauseTimer">
+
+                Pause
+
+            </button>
+
+            <button id="resetTimer">
+
+                Reset
+
+            </button>
+
+
+        </section>
+
+
+        <!-- ======================
+VOICE INPUT
+====================== -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                🎤 Voice Input
+
+            </h2>
+
+            <button id="voiceButton">
+
+                Start Listening
+
+            </button>
+
+
+        </section>
+
+
+        <!-- ======================
+RESET
+====================== -->
+
+        <section class="settings-card danger">
+
+            <h2>
+
+                ⚠️ Danger Zone
+
+            </h2>
+
+            <button id="clearTasks">
+
+                Clear All Tasks
+
+            </button>
+
+
+            <button id="resetApp">
+
+                Reset Application
+
+            </button>
+
+        </section>
+
+
+        <!-- ======================
+ABOUT
+====================== -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                ℹ️ About TodoFlow
+
+            </h2>
+
+
+            <p>
+
+                TodoFlow is an advanced productivity web application built using HTML5, CSS3 and JavaScript.
+
+            </p>
+
+            <p>
+
+                Version 1.0.0
+
+            </p>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+
+
+                © 2026 TodoFlow
+
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- ======================
+CONFIRM RESET MODAL
+====================== -->
+
+    <div id="resetModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>
+
+                Reset Application?
+
+
+            </h2>
+
+            <p>
+
+                This action cannot be undone.
+
+            </p>
+
+            <div class="modal-buttons">
+
+                <button id="confirmReset">
+
+                    Reset
+
+                </button>
+
+                <button id="cancelReset">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================
+TOAST
+====================== -->
+
+    <div id="toastContainer"></div>
+
+
+    <!-- ======================
+JS
+====================== -->
+
+    <script src="storage.js"></script>
+
+
+    <script src="settings.js"></script>
+
+    <script src="theme.js"></script>
+
+    <script src="voice.js"></script>
+
+    <script src="toast.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

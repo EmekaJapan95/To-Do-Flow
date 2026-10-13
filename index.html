@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ==========================================
+         TODOFLOW - DASHBOARD
+         Author: Your Name
+    =========================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TodoFlow | Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- ==========================
+     SIDEBAR
+=========================== -->
+
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>✅ TodoFlow</h2>
+        </div>
+
+        <nav>
+
+            <a class="active" href="index.html">
+                Dashboard
+            </a>
+
+            <a href="tasks.html">
+                Tasks
+            </a>
+
+            <a href="add-task.html">
+                Add Task
+            </a>
+
+            <a href="calendar.html">
+                Calendar
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ==========================
+     MAIN
+=========================== -->
+
+    <div class="main">
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div class="welcome">
+
+                <h1>
+                    Welcome Back 👋
+                </h1>
+
+                <p id="currentDate"></p>
+
+                <p id="currentTime"></p>
+
+            </div>
+
+            <div class="header-right">
+
+                <button id="themeToggle">
+
+                    🌙
+
+                </button>
+
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <h3>Total Tasks</h3>
+
+                <h1 id="totalTasks">
+
+                    0
+
+                </h1>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>Completed</h3>
+
+                <h1 id="completedTasks">
+
+                    0
+
+                </h1>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Pending</h3>
+
+                <h1 id="pendingTasks">
+
+                    0
+
+                </h1>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Overdue</h3>
+
+                <h1 id="overdueTasks">
+
+                    0
+
+                </h1>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+
+        <section class="progress-section">
+
+            <h2>
+
+                Progress
+
+            </h2>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+            <p id="progressText">
+
+                0%
+
+            </p>
+
+        </section>
+
+
+        <!-- TODAY TASKS -->
+
+        <section class="today">
+
+            <h2>
+
+                Today's Tasks
+
+            </h2>
+
+            <div id="todayTasks">
+
+                No Tasks Today
+
+            </div>
+
+        </section>
+
+
+
+        <!-- UPCOMING -->
+
+        <section class="upcoming">
+
+            <h2>
+
+                Upcoming Tasks
+
+            </h2>
+
+            <div id="upcomingTasks">
+
+                No Upcoming Tasks
+
+            </div>
+
+        </section>
+
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="quick-actions">
+
+            <a href="add-task.html">
+
+                <button>
+
+                    ➕ Add New Task
+
+                </button>
+
+            </a>
+
+            <a href="tasks.html">
+
+                <button>
+
+                    📋 View Tasks
+
+
+                </button>
+
+            </a>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+
+                © 2026 TodoFlow
+
+            </p>
+
+        </footer>
+
+    </div>
+
+    <!-- Loading Modal -->
+    <div class="loading-modal" id="loading-modal">
+        <div class="loading-card">
+            <div class="spinner"></div>
+            <h2>Saving Task..</h2>
+            <p>Please WHILE YOUR  wait a moment.</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="storage.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TodoFlow | Add Task</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<body>
+
+
+    <!-- ======================
+SIDEBAR
+====================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>✅ TodoFlow</h2>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Dashboard</a>
+
+            <a href="tasks.html">Tasks</a>
+
+            <a class="active" href="add-task.html">Add Task</a>
+
+            <a href="calendar.html">Calendar</a>
+
+
+            <a href="settings.html">Settings</a>
+
+        </nav>
+
+    </aside>
+
+    <!-- ======================
+MAIN CONTENT
+====================== -->
+
+    <div class="main">
+
+        <header>
+
+            <h1>
+
+                ➕ Create New Task
+
+            </h1>
+
+            <button id="themeToggle">
+
+                🌙
+
+            </button>
+
+        </header>
+
+        <!-- ======================
+TASK FORM
+====================== -->
+
+        <section class="task-form">
+
+            <form id="taskForm">
+
+                <label>Task Title</label>
+
+                <input type="text" id="taskTitle" placeholder="Enter task title..." required>
+
+                <label>Description</label>
+
+                <textarea id="taskDescription" rows="5" placeholder="Task description..."></textarea>
+
+                <label>Category</label>
+
+                <select id="taskCategory">
+
+                    <option>📚 School</option>
+
+                    <option>💼 Work</option>
+
+                    <option>🏠 Home</option>
+
+                    <option>🛒 Shopping</option>
+
+                    <option>💪 Fitness</option>
+
+                    <option>🎮 Gaming</option>
+
+                </select>
+
+                <label>Create Custom Category</label>
+
+                <div class="custom-category">
+
+                    <input type="text" id="newCategory" placeholder="New Category">
+
+                    <button type="button" id="addCategory">
+
+                        Add
+
+                    </button>
+
+                </div>
+
+                <label>Due Date</label>
+
+                <input type="date" id="taskDate">
+
+                <label>Due Time</label>
+
+                <input type="time" id="taskTime">
+
+                <label>Priority</label>
+
+                <select id="taskPriority">
+
+
+                    <option value="Low">🟢 Low</option>
+
+                    <option value="Medium">🟡 Medium</option>
+
+                    <option value="High">🔴 High</option>
+
+                </select>
+
+                <label>Task Color</label>
+
+                <input type="color" id="taskColor" value="#4CAF50">
+
+                <label>Emoji/Icon</label>
+
+                <input type="text" id="taskEmoji" placeholder="📚 😊 🚀 🎯">
+
+                <div class="form-buttons">
+
+                    <button type="submit">
+
+                        💾 Save Task
+
+                    </button>
+
+                    <button type="reset">
+
+                        🔄 Reset
+
+                    </button>
+
+                    <a href="tasks.html">
+
+                        <button type="button">
+
+                            📋 View Tasks
+
+                        </button>
+
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- ======================
+LIVE PREVIEW
+====================== -->
+
+        <section class="preview">
+
+            <h2>
+
+                Live Preview
+
+
+            </h2>
+
+            <div id="previewCard" class="preview-card">
+
+                <div class="preview-header">
+
+                    <span id="previewEmoji">
+
+                        📝
+
+                    </span>
+
+                    <h3 id="previewTitle">
+
+                        Task Title
+
+                    </h3>
+
+                </div>
+
+
+                <p id="previewDescription">
+
+                    Task description...
+
+                </p>
+
+                <div class="preview-footer">
+
+                    <span id="previewCategory">
+
+                        📚 School
+
+                    </span>
+
+                    <span id="previewPriority">
+
+                        🟢 Low
+
+                    </span>
+
+                </div>
+
+                <p id="previewDate">
+
+                    No Due Date
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- ======================
+TOAST
+====================== -->
+
+    <div id="toastContainer"></div>
+
+    <!-- ======================
+
+JAVASCRIPT
+====================== -->
+
+    <script src="storage.js"></script>
+    <script src="addTask.js"></script>
+    <script src="category.js"></script>
+    <script src="theme.js"></script>
+    <script src="toast.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
